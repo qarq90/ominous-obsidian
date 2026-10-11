@@ -1,0 +1,173 @@
+
+/* =========================================================
+   OBSIDIAN MERMAID THEME
+   Flowcharts: White nodes, black text, white connectors
+   XY Charts: Black text, axes, and plotted curves
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. DARK MODE
+   Disable automatic SVG color inversion
+   --------------------------------------------------------- */
+
+.theme-dark .mermaid > svg {
+    filter: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. FLOWCHART NODES
+   White fill with black outlines
+   --------------------------------------------------------- */
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path,
+.mermaid .node .label-container {
+    fill: #ffffff !important;
+    stroke: #000000 !important;
+    stroke-width: 1.5px !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. FLOWCHART NODE LABELS
+   Black text on white nodes
+   --------------------------------------------------------- */
+
+.mermaid .node text,
+.mermaid .nodeLabel,
+.mermaid .nodeLabel p,
+.mermaid .label,
+.mermaid .label text,
+.mermaid .node foreignObject,
+.mermaid .node foreignObject div,
+.mermaid .node foreignObject span {
+    fill: #ffffff !important;
+    color: #000000 !important;
+}
+
+
+/* ---------------------------------------------------------
+   4. FLOWCHART EDGE LABELS
+   White text on black backgrounds
+   --------------------------------------------------------- */
+
+.mermaid .edgeLabel,
+.mermaid .edgeLabel p,
+.mermaid .edgeLabel rect,
+.mermaid .edgeLabel foreignObject,
+.mermaid .edgeLabel foreignObject div,
+.mermaid .edgeLabel foreignObject span {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    background-color: #000000 !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. FLOWCHART CONNECTORS
+   Pure white lines with consistent stroke width
+   --------------------------------------------------------- */
+
+.mermaid .edgePath .path,
+.mermaid .flowchart-link,
+.mermaid path.flowchart-link,
+.mermaid .edgePath path,
+.mermaid .edge-thickness-normal,
+.mermaid .edge-thickness-thick,
+.mermaid .edge-thickness-invisible,
+.mermaid .edge-pattern-solid,
+.mermaid .edge-pattern-dashed,
+.mermaid .edge-pattern-dotted {
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+    fill: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. FLOWCHART ARROWHEADS
+   Pure white fill and outlines
+   --------------------------------------------------------- */
+
+.mermaid defs marker path,
+.mermaid marker path,
+.mermaid marker#flowchart-pointEnd path,
+.mermaid marker#flowchart-pointStart path,
+.mermaid marker#flowchart-circleEnd path,
+.mermaid marker#flowchart-circleStart path,
+.mermaid marker#flowchart-crossEnd path,
+.mermaid marker#flowchart-crossStart path,
+.mermaid .marker,
+.mermaid .arrowheadPath,
+.mermaid .arrowMarkerPath,
+.mermaid marker {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    stroke-width: 1px !important;
+}
+
+
+/* =========================================================
+   XY CHART STYLING
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   7. CHART TYPOGRAPHY
+   Black title, axis labels, and tick labels
+   --------------------------------------------------------- */
+
+.theme-dark .mermaid svg text,
+.theme-dark .mermaid svg tspan,
+.theme-dark .mermaid svg .label,
+.theme-dark .mermaid svg .title {
+    fill: #000000 !important;
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. CHART AXES
+   Black axis lines and tick marks
+   --------------------------------------------------------- */
+
+.theme-dark .mermaid svg .axis path,
+.theme-dark .mermaid svg .axis line,
+.theme-dark .mermaid svg .tick line {
+    stroke: #000000 !important;
+    stroke-opacity: 1 !important;
+}
+
+
+/* ---------------------------------------------------------
+   9. PLOTTED CURVES
+   Solid black with full opacity and increased thickness
+   --------------------------------------------------------- */
+
+.theme-dark .mermaid svg .plot-line,
+.theme-dark .mermaid svg .line-plot-0,
+.theme-dark .mermaid svg path[class*="line"],
+.theme-dark .mermaid svg g[class*="plot"] path {
+    stroke: #000000 !important;
+    stroke-width: 3px !important;
+    stroke-opacity: 1 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    fill: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   10. PLOT OPACITY
+   Prevent plotted curves from appearing faded
+   --------------------------------------------------------- */
+
+.theme-dark .mermaid svg g[class*="plot"] {
+    opacity: 1 !important;
+}

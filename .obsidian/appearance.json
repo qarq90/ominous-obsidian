@@ -1,0 +1,16 @@
+{
+  "accentColor": "#d666ff",
+  "cssTheme": "",
+  "showViewHeader": true,
+  "showRibbon": false,
+  "interfaceFontFamily": "",
+  "baseFontSize": 20,
+  "textFontFamily": "Calibri",
+  "baseFontSizeAction": true,
+  "nativeMenus": false,
+  "monospaceFontFamily": "JetBrains Mono NL",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "mermaid-white"
+  ]
+}

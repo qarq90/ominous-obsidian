@@ -1,0 +1,258 @@
+{
+  "main": {
+    "id": "2f7d1d0fe1b1e6f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b65efa9b0bb79bdd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6a3d785899ef63ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SEM 7/AIDS-2/Sandbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sandbox"
+            }
+          }
+        ]
+      },
+      {
+        "id": "46b0d5894633339f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b74413b0569c1d01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SEM 7/AIDS-2/AIDS-2 IA 2 AB.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AIDS-2 IA 2 AB"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4c161344fc40c21e",
+    "type": "split",
+    "children": [
+      {
+        "id": "616e2e0c361db73b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b68697c9e14b846d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5fd31b4c099b2e02",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "78265ad160ebddce",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 260.5
+  },
+  "right": {
+    "id": "df22a387c210c3c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c38edc7a9c26158",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea585450581abedf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c2f20e3e299135ca",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e94d5dfa799fdcbf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SEM 6/WT/WT Unique Questions.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of WT Unique Questions"
+            }
+          },
+          {
+            "id": "a817ca2d30f42c8e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "SEM 6/WT/WT Unique Questions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for WT Unique Questions"
+            }
+          },
+          {
+            "id": "dc7e767ec0610811",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "SEM 7/AIDS-2/Sandbox.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "math-plotter:Insert Function Plot": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "bases:Create new base": false,
+      "audio-recorder:Start/stop recording": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b74413b0569c1d01",
+  "lastOpenFiles": [
+    "SEM 7/AIDS-2/Sandbox.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 2 AB.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 2 QB.md",
+    "SEM 7/IOE/IOE IA 1 AB.md",
+    "SEM 7/IOE/IOE IA 2 QB.md",
+    "SEM 7/IOE/IOE IA 2 AB.md",
+    "SEM 7/IOE/IOE IA 1 QB.md",
+    "SEM 7/IRS/IRS IA 2 AB.md",
+    "SEM 7/IRS/IRS IA 2 QB.md",
+    "SEM 7/STQA/STQA IA 2 AB.md",
+    "SEM 7/STQA/STQA IA 2 QB.md",
+    "SEM 7/STQA/STQA IA 1 QB.md",
+    "SEM 7/STQA/STQA IA 1 AB.md",
+    "SEM 7/IRS/IRS IA 1 QB.md",
+    "SEM 7/IRS/IRS IA 1 AB.md",
+    "SEM 7/DMMM/DMMM IA 2 QB.md",
+    "SEM 7/DMMM/DMMM IA 2 AB.md",
+    "SEM 7/DMMM/DMMM IA 1 QB.md",
+    "SEM 7/DMMM/DMMM IA 1 AB.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 1 QB.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 1 AB.md",
+    "snippets/mermaid-white.css",
+    "snippets/New Text Document.txt",
+    "snippets",
+    "New folder",
+    "assets/imgs/pdf-banner-header.png.~tmp",
+    "assets/imgs/pdf-banner-footer.png.~tmp",
+    "assets/imgs/pdf-banner-footer.png",
+    "assets/imgs/pdf-banner-footery.png",
+    "assets/imgs/pdf-banner-header - Copy.png",
+    "assets/imgs/pdf-banner-header.png",
+    "assets/imgs/pdf-banner.png",
+    "assets/imgs/layered-waves-haikei.png",
+    "assets/imgs",
+    "assets/New folder",
+    "assets",
+    "SEM 7/DMMM/DMMM IA 2 QB.pdf",
+    "SEM 7/AIDS-2/AIDS-2 IA 2 AB 1.md",
+    "SEM 7/IRS/Sandbox.md",
+    "my prompts.md",
+    "Prompts.md",
+    "Pasted image 20260514034658.png",
+    "Pasted image 20260514025913.png",
+    "Untitled.canvas"
+  ]
+}
