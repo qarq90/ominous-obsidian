@@ -1,26 +1,24 @@
 ### **Q.1 (2 Marks Each)**
 
-1. Define the following terms: Bug, Defect, Error, Failure, and Fault.
-2. List and briefly define any four Black Box Testing techniques.
-3. Explain the need for software metrics in the testing process.
-4. Differentiate between Static Testing and Dynamic Testing.
-5. List the key components of a test plan as per the IEEE 829 standard.
-6. List the attributes and the corresponding metrics used for monitoring and controlling the testing process.
-7. Differentiate between Verification and Validation.
-8. What is cyclomatic complexity, and provide its formula.
-9. Define Alpha Testing and Beta Testing.
-10. Explain the terms Stub and Driver in the context of Integration Testing.
-11. State the goals of software testing.
+  1. [x] Define Software Metrics. Classify software metrics with one example of each class.
+  2. [x] What is test suite minimization? State any two benefits of minimizing a test suite.
+  3. [x] Why is test automation needed? State any four reasons for automating software testing.
+  4. [x] Differentiate between Static and Dynamic testing tools with one example of each.
+  5. [x] Differentiate between JIRA and Bugzilla (any four points).
+  6. [x] List any four challenges in testing web-based software.
+  7. [x] Differentiate between Traditional Software and Web-based Software (any four points).
+  8. [x] Define Agile Testing. State any two principles of Agile Testing.
+  9. [ ] List any four quality management principles of ISO 9000:2000.
+  10. [ ] Explain the DMAIC methodology of Six Sigma in brief.
 
 ---
 
 ### **Q.2 (5 Marks Each)**
 
-12. Illustrate the Software Testing Life Cycle with the help of a neat diagram, and explain each phase with a suitable example.
-13. Apply Boundary Value Analysis and Equivalence Class Testing to design test cases for a program that accepts three sides of a triangle, each ranging from `1 to 100`, and identifies whether the triangle is Scalene, Isosceles, Equilateral, or Invalid.
-14. Analyze the different Regression Testing techniques and evaluate their applicability with a suitable example scenario.
-15. Evaluate different Test Suite Prioritization techniques for a given project. Compare their effectiveness and discuss the metrics used to measure prioritization effectiveness.
-16. Explain the Software Defect Life Cycle with a neat diagram and briefly define all its states.
-17. Describe the four Integration Testing strategies with diagrams, and explain the role of Stubs and Drivers in each.
-18. Explain Basis Path Testing. For a given control flow graph, compute the cyclomatic complexity and determine the number of independent paths.
-19. Analyze the Test Planning process in detail. Explain how Test Organization, Structure of the Testing Group, Detailed Test Design, and Test Specification contribute to effective test management. Illustrate your answer with a sample test plan outline.
+  1. [x] A project has the following counts, all of average complexity: External Inputs = 24, External Outputs = 16, External Inquiries = 22, Internal Logical Files = 4 and External Interface Files = 2. The sum of the complexity adjustment factors (ΣFi) is 42. Apply Function Point Analysis to compute the Unadjusted Function Points and the Adjusted Function Points, and explain how function points help in estimating testing effort.
+  2. [x] Explain test suite prioritization, its types and techniques. How is the effectiveness of a prioritized test suite measured (APFD)? 
+  3. [x] A company with frequent regression cycles plans to purchase an automated testing tool. Analyze the guidelines and criteria for selecting a testing tool and the various costs incurred in testing tools, and evaluate whether investing in automation is justified for this project. 
+  4. [x] Apply Selenium WebDriver to automate the login functionality of a web application. Design positive and negative test cases, outline the automation steps (locating elements, entering data, verifying the result) and state the Selenium suite components used. 
+  5. [x] An online shopping website is about to be released. Apply web-based testing techniques to design test cases covering functionality, user interface/usability, browser compatibility, performance (load) and security of the website. 
+  6. [x] Explain the Agile Testing Life Cycle and describe the testing activities carried out in the different phases of Scrum. 
+  7. [x] Analyze McCall's quality factors and criteria for an Internet Banking application. Identify the factors most critical to its success with justification, and evaluate the trade-off (conflict) between any two quality factors. 

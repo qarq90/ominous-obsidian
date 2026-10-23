@@ -4,41 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b65efa9b0bb79bdd",
+        "id": "56dd142a0fe46569",
         "type": "tabs",
         "children": [
           {
-            "id": "6a3d785899ef63ec",
+            "id": "0bd4f84b0c8eb6df",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SEM 7/AIDS-2/Sandbox.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Sandbox"
-            }
-          }
-        ]
-      },
-      {
-        "id": "46b0d5894633339f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b74413b0569c1d01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SEM 7/AIDS-2/AIDS-2 IA 2 AB.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AIDS-2 IA 2 AB"
+              "title": "New tab"
             }
           }
         ]
@@ -75,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#chatgpt-mermaid-_r_du_",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,49 +184,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b74413b0569c1d01",
+  "active": "0bd4f84b0c8eb6df",
   "lastOpenFiles": [
-    "SEM 7/AIDS-2/Sandbox.md",
-    "SEM 7/AIDS-2/AIDS-2 IA 2 AB.md",
-    "SEM 7/AIDS-2/AIDS-2 IA 2 QB.md",
-    "SEM 7/IOE/IOE IA 1 AB.md",
-    "SEM 7/IOE/IOE IA 2 QB.md",
-    "SEM 7/IOE/IOE IA 2 AB.md",
-    "SEM 7/IOE/IOE IA 1 QB.md",
-    "SEM 7/IRS/IRS IA 2 AB.md",
-    "SEM 7/IRS/IRS IA 2 QB.md",
-    "SEM 7/STQA/STQA IA 2 AB.md",
-    "SEM 7/STQA/STQA IA 2 QB.md",
-    "SEM 7/STQA/STQA IA 1 QB.md",
-    "SEM 7/STQA/STQA IA 1 AB.md",
-    "SEM 7/IRS/IRS IA 1 QB.md",
-    "SEM 7/IRS/IRS IA 1 AB.md",
-    "SEM 7/DMMM/DMMM IA 2 QB.md",
-    "SEM 7/DMMM/DMMM IA 2 AB.md",
-    "SEM 7/DMMM/DMMM IA 1 QB.md",
-    "SEM 7/DMMM/DMMM IA 1 AB.md",
+    "Sandbox.md",
+    "Prompts.md",
     "SEM 7/AIDS-2/AIDS-2 IA 1 QB.md",
+    "SEM 7/AIDS-2/AIDS-2 Questions.md",
+    "SEM 7/AIDS-2/AIDS-2 Module 1.md",
+    "SEM 7/AIDS-2/AIDS-2 Module 4.md",
+    "SEM 7/AIDS-2/AIDS-2 Module 3.md",
+    "AIDS-2 Module 3.md",
+    "SEM 7/AIDS-2/AIDS-2 Module 2.md",
+    "AIDS-2 Module 2.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 2 QB.md",
+    "SEM 7/DMMM/DMMM IA 1 AB.md",
+    "SEM 7/DMMM/DMMM IA 2 AB.md",
+    "SEM 7/STQA/STQA IA 2 QB.md",
+    "SEM 7/STQA/STQA IA 1 AB.md",
+    "SEM 7/STQA/STQA IA 2 AB.md",
+    "AIDS-2 Module 1.md",
+    "SEM 7/DMMM/DMMM Questions.md",
+    "SEM 7/IOE/IOE Questions.md",
+    "SEM 7/IRS/IRS Questions.md",
+    "SEM 7/STQA/STQA Questions.md",
+    "SEM 7/IOE/Untitled",
+    "SEM 6/EHF/EHF Module 1.md",
+    "SEM 7/AIDS-2/AIDS-2 IA 2 AB.md",
     "SEM 7/AIDS-2/AIDS-2 IA 1 AB.md",
+    "SEM 6/EHF/EHF Module 5.md",
+    "SEM 6/EHF/EHF Module 4.md",
+    "assets/imgs/pdf-banner-footer.png.~tmp",
+    "assets/imgs/pdf-banner-footer.png",
+    "assets/imgs/pdf-banner-header - Copy.png",
     "snippets/mermaid-white.css",
     "snippets/New Text Document.txt",
     "snippets",
     "New folder",
     "assets/imgs/pdf-banner-header.png.~tmp",
-    "assets/imgs/pdf-banner-footer.png.~tmp",
-    "assets/imgs/pdf-banner-footer.png",
     "assets/imgs/pdf-banner-footery.png",
-    "assets/imgs/pdf-banner-header - Copy.png",
     "assets/imgs/pdf-banner-header.png",
     "assets/imgs/pdf-banner.png",
     "assets/imgs/layered-waves-haikei.png",
     "assets/imgs",
     "assets/New folder",
     "assets",
-    "SEM 7/DMMM/DMMM IA 2 QB.pdf",
-    "SEM 7/AIDS-2/AIDS-2 IA 2 AB 1.md",
-    "SEM 7/IRS/Sandbox.md",
-    "my prompts.md",
-    "Prompts.md",
     "Pasted image 20260514034658.png",
     "Pasted image 20260514025913.png",
     "Untitled.canvas"

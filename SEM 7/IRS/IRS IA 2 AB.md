@@ -1,25 +1,28 @@
 #### Define a feature vector in Multimedia IR and give one image feature example (2 marks)
 
-A **feature vector** is a numerical representation of an object's visual, textual, or audio properties, used by multimedia IR systems to index, compare, and retrieve similar items.
+In Multimedia Information Retrieval (MIR), a **feature vector** is an n-dimensional ordered list of numerical values that mathematically represents the key characteristics (features) of a multimedia object, such as an image, audio clip, or video
 
-- **Definition:** An ordered set of extracted feature values, e.g., \( \mathbf{v} = (f_1, f_2, \dots, f_n) \), that describes an object in a high-dimensional feature space.
+- **Definition:** An ordered set of extracted feature values, e.g., $\mathbf{v} = (f_1, f_2, \dots, f_n)$, that describes an object in a high-dimensional feature space.
 - **Purpose:** Enables similarity computation (e.g., Euclidean or cosine distance) between a query and stored objects.
 
-**Example of an image feature:** **Color histogram** — a vector counting the frequency of pixels in each color bin, e.g., \( (0.35, 0.20, 0.15, \dots) \).
+**Example of an image feature:** **Color histogram**: a vector counting the frequency of pixels in each color bin, e.g., \( (0.35, 0.20, 0.15, \dots) \).
 
-**Result:** A feature vector is a numeric descriptor of an object; a color histogram is one common image feature vector.
 
 ---
 
 #### Differentiate between browsing and searching on the Web (2 marks)
 
-| Aspect | Browsing | Searching |
-|---|---|---|
-| **Goal** | Exploratory, open-ended navigation | Targeted retrieval of a specific answer |
+| **Aspect**     | **Browsing**                        | **Searching**                           |
+| -------------- | ----------------------------------- | --------------------------------------- |
+| **Goal**       | Exploratory, open-ended navigation  | Targeted retrieval of a specific answer |
 | **User input** | Follows links, categories, or menus | Enters keywords/query into a search box |
-| **Outcome** | Serendipitous discovery | Ranked list of relevant results |
+| **Outcome**    | Serendipitous discovery             | Ranked list of relevant results         |
+| **Direction**  | User-driven, no fixed target        | Query-driven, focused on a goal         |
+| **Effort**     | Low cognitive load, casual          | Higher cognitive load, precise          |
+| **Structure**  | Hierarchical or linked organization | Index-based, flat result list           |
+| **Speed**      | Slower, time-consuming exploration  | Faster, immediate results               |
+| **Best for**   | Vague or unknown information needs  | Clear, well-defined information needs   |
 
-**Key Distinctions:** Browsing is user-driven navigation without a precise target, whereas searching is query-driven retrieval aimed at a known information need.
 
 ---
 
@@ -28,10 +31,9 @@ A **feature vector** is a numerical representation of an object's visual, textua
 **Starting points** are entry mechanisms or seed resources offered by a search interface that help users begin their information-seeking task without needing to formulate a full query.
 
 - **Examples:**
-  1. **Directory/category links** — e.g., Yahoo!-style subject hierarchies.
-  2. **Suggested queries or hot topics** — e.g., trending searches on Google.
+  1. **Directory/category links**: e.g., Yahoo!-style subject hierarchies.
+  2. **Suggested queries or hot topics**: e.g., trending searches on Google.
 
-**Result:** Starting points lower the cognitive barrier to initiating a search and guide users toward productive queries.
 
 ---
 
@@ -42,19 +44,17 @@ A **feature vector** is a numerical representation of an object's visual, textua
 - **Use:** It helps users perceive patterns, anomalies, and structure in large documents at a glance.
 - **Application:** Software maintenance, code analysis, and document visualization in IR interfaces.
 
-**Result:** SeeSoft provides a compact visual overview of large text collections to aid navigation and pattern detection.
 
 ---
 
 #### Define metadata and list two types (2 marks)
 
-**Metadata** is **data about data** — structured information that describes, explains, locates, or otherwise makes it easier to retrieve and manage an information resource.
+**Metadata** is **data about data**: structured information that describes, explains, locates, or otherwise makes it easier to retrieve and manage an information resource.
 
-- **Two types:**
-  1. **Descriptive metadata** — e.g., title, author, subject keywords.
-  2. **Structural metadata** — e.g., chapter hierarchy, page order, file format details.
+**Two types:**
+  1. **Descriptive metadata**: e.g., title, author, subject keywords.
+  2. **Structural metadata**: e.g., chapter hierarchy, page order, file format details.
 
-**Result:** Metadata improves resource discovery, organization, and interoperability across IR systems.
 
 ---
 
@@ -65,18 +65,16 @@ A **meta-search engine** is a system that sends a user's query to **multiple ind
 - **Characteristics:** No own index; relies on other engines' indexes; removes duplicates and re-ranks.
 - **Example:** **Dogpile** (also MetaCrawler, Searx).
 
-**Result:** Meta-search engines increase coverage and reduce dependence on a single engine's ranking.
 
 ---
 
 #### Define stemming and explain with two examples (2 marks)
 
-**Stemming** is the process of reducing inflected or derived words to their **root or stem form**, so that morphologically related terms match during retrieval.
+**Stemming** is a text preprocessing technique in NLP that reduces words to their root or base form by removing prefixes and suffixes. It helps simplify and standardize text, making text analysis and processing more efficient.
 
 - **Example 1:** "retrieval", "retrieve", "retrieved" → **retriev**
 - **Example 2:** "studies", "studying", "studied" → **studi**
 
-**Result:** Stemming improves recall by conflating word variants into a single index term.
 
 ---
 
@@ -84,12 +82,11 @@ A **meta-search engine** is a system that sends a user's query to **multiple ind
 
 **Human-Computer Interaction (HCI)** is the study of how people interact with computer systems, focusing on the design, evaluation, and implementation of usable interfaces.
 
-- **Importance in IR:**
+**Importance in IR:**
   - Helps design intuitive query formulation and result presentation.
   - Supports relevance feedback, query refinement, and result visualization.
   - Reduces cognitive load and improves user satisfaction and search effectiveness.
 
-**Result:** HCI principles are essential for making IR interfaces usable, efficient, and user-centered.
 
 ---
 
@@ -97,36 +94,49 @@ A **meta-search engine** is a system that sends a user's query to **multiple ind
 
 **KWIC (Key Word In Context)** is a display format in which each occurrence of a search term is shown **within its surrounding text context**, typically aligned in a central column.
 
-- **Format example:**
-  - ...information **retrieval** is the study...
-  - ...web search is a type of **retrieval**...
+**Format Example:**
 
-- **Uses:** Concordances, digital libraries, legal document search, and result snippet presentation.
+| Left Context | **Keyword** | Right Context |
+|---|---|---|
+| ...information | **retrieval** | is the study... |
+| ...web search is a type of | **retrieval** | ... |
+| ...data | **retrieval** | is different from... |
 
-**Result:** KWIC helps users quickly judge the relevance of a term by seeing its contextual usage.
+**Uses:**
+- Concordances and text analysis
+- Digital libraries and archives
+- Legal document search
+- Search result snippet presentation
+- Linguistic and literary research
+
 
 ---
 
 #### Differentiate between HTML and XML (2 marks)
 
-| Aspect | HTML | XML |
-|---|---|---|
-| **Purpose** | Presentation and display of web content | Description, storage, and transport of structured data |
-| **Tags** | Predefined, fixed set | User-defined, extensible |
-| **Case sensitivity** | Case-insensitive | Case-sensitive |
-| **Closing tags** | Some optional | Mandatory for all elements |
+| **Aspect**           | **HTML**                                | **XML**                                                |
+| -------------------- | --------------------------------------- | ------------------------------------------------------ |
+| **Purpose**          | Presentation and display of web content | Description, storage, and transport of structured data |
+| **Tags**             | Predefined, fixed set                   | User-defined, extensible                               |
+| **Case sensitivity** | Case-insensitive                        | Case-sensitive                                         |
+| **Closing tags**     | Some optional                           | Mandatory for all elements                             |
+| **Focus**            | How data looks                          | What data means                                        |
+| **Error handling**   | Lenient, browsers forgive errors        | Strict, any error stops parsing                        |
+| **Data storage**     | Not designed for data storage           | Designed for data storage and exchange                 |
+| **Extensibility**    | Cannot define new tags                  | Users can define custom tags                           |
+| **Parsing**          | Parsed by browsers                      | Parsed by XML parsers                                  |
+| **Usage**            | Web pages                               | Configuration files, APIs, data exchange               |
 
-**Key Distinctions:** HTML focuses on how data looks; XML focuses on what data means, making it suitable for data interchange.
 
 ---
 
 #### Explain suffix trees and suffix arrays with an example; search 'ana' in 'banana' (5 marks)
 
-**Suffix Tree:** A compressed trie containing all suffixes of a string, where each edge is labeled with a substring and each leaf represents a suffix position. It supports fast pattern matching in \(O(m)\) time for pattern length \(m\).
+**Suffix Tree:** A compressed tree containing all suffixes of a string, where each edge is labelled with a substring and each leaf represents a suffix position. It supports fast pattern matching in \(O(m)\) time for pattern length \(m\).
 
 **Suffix Array:** A sorted array of all suffix starting positions of a string. It is more space-efficient than a suffix tree and supports binary-search-based pattern matching in \(O(m \log n)\).
 
-**Example — Text:** `banana` (positions 0–5)
+**Example: Text:** `banana` (positions 0–5)
 
 Suffixes:
 - 0: banana
@@ -137,6 +147,7 @@ Suffixes:
 - 5: a
 
 Sorted suffixes and suffix array:
+
 | Rank | Suffix | Start Position |
 |---|---|---|
 | 1 | a | 5 |
@@ -166,9 +177,10 @@ graph LR
     C --> I["Match: ana at pos 1"]
 ```
 
+
 ---
 
-#### Explain query specification interfaces with examples (5 marks)
+#### Explain the different Query Specification interfaces (Boolean, natural language, form-based and graphical) with suitable examples.
 
 **1. Boolean Interface**
 - Uses operators **AND, OR, NOT** to combine terms.
@@ -190,7 +202,6 @@ graph LR
 - **Example:** A Venn diagram where users click regions to form Boolean queries.
 - **Strength:** Intuitive for complex logic; **Weakness:** Screen-space intensive.
 
-**Result:** Each interface trades off ease of use against expressive precision, and real systems often combine them.
 
 ---
 
@@ -210,24 +221,15 @@ graph LR
 4. System reformulates the query (e.g., Rocchio algorithm) by expanding the query vector toward relevant documents and away from non-relevant ones.
 5. Improved results are returned.
 
-**Rocchio Formula:**
-\[
-Q_{new} = \alpha Q + \beta \frac{1}{|D_r|}\sum_{d \in D_r} d - \gamma \frac{1}{|D_{nr}|}\sum_{d \in D_{nr}} d
-\]
-
-- \(D_r\) = relevant docs, \(D_{nr}\) = non-relevant docs.
-- \(\alpha, \beta, \gamma\) control the balance.
-
 ```mermaid
 graph TD
     A["Initial Query"] --> B["Result Set"]
     B --> C["User Marks Relevant / Non-Relevant"]
-    C --> D["Query Reformulation (Rocchio)"]
+    C --> D["Query Reformulation"]
     D --> E["Improved Result Set"]
     E --> C
 ```
 
-**Result:** Relevance feedback closes the loop between user and system, progressively improving retrieval effectiveness.
 
 ---
 
@@ -267,7 +269,6 @@ graph TD
     B --> I["D2"]
 ```
 
-**Result:** Merges occur at heights **2 (D1,D2), 3 (D4,D5), 4 (D3 with D4,D5), 5 (final)** — matching the answer check.
 
 ---
 
@@ -307,38 +308,32 @@ graph TD
 | different | (D3, 1) |
 
 **(b) Query Processing:**
-
 - **(information AND retrieval):** Intersection of postings → {D1, D2, D3}
 - **AND NOT data:** Remove documents containing "data" (D3) → **{D1, D2}**
 - **web OR data:** Union of postings → {D2} ∪ {D3} = **{D2, D3}**
 
-**Result:** (information AND retrieval) AND NOT data = **{D1, D2}**; web OR data = **{D2, D3}** — matching the answer check.
 
 ---
 
 #### Describe the stages of the Information Access Process with a diagram and evaluate interface support (5 marks)
 
 **Stages of the Information Access Process:**
-
-1. **Information Need** — User recognizes a gap in knowledge.
-2. **Query Formulation** — User translates the need into a query.
-3. **Query Execution** — System matches the query against the index.
-4. **Result Presentation** — Ranked results are displayed.
-5. **Relevance Judgment** — User evaluates results.
-6. **Query Refinement** — User reformulates based on feedback.
-7. **Information Use** — User extracts and applies the information.
+1. **Information Need**: User recognizes a gap in knowledge.
+2. **Query Formulation**: User translates the need into a query.
+3. **Query Execution**: System matches the query against the index.
+4. **Result Presentation**: Ranked results are displayed.
+5. **Relevance Judgment**: User evaluates results.
+6. **Query Refinement**: User reformulates based on feedback.
+7. **Information Use**: User extracts and applies the information.
 
 **Interface Support at Each Stage:**
-
-| Stage | Interface Support |
-|---|---|
-| Information Need | Starting points, suggested topics, browsing categories |
-| Query Formulation | Auto-complete, Boolean builders, natural language input, form-based fields |
-| Query Execution | Progress indicators, query previews |
-| Result Presentation | Snippets, KWIC, clustering, visualization (SeeSoft, scatter plots) |
-| Relevance Judgment | Relevance feedback buttons, highlighting, ranking explanations |
-| Query Refinement | "More like this", query expansion, related searches |
-| Information Use | Export, annotation, citation tools |
+- **Information Need** : Starting points, suggested topics, browsing categories.
+- **Query Formulation** : Auto-complete, Boolean builders, natural language input, form-based fields.
+- **Query Execution** : Progress indicators, query previews.
+- **Result Presentation** : Snippets, KWIC, clustering, visualization (SeeSoft, scatter plots).
+- **Relevance Judgment** : Relevance feedback buttons, highlighting, ranking explanations.
+- **Query Refinement** : "More like this", query expansion, related searches.
+- **Information Use** : Export, annotation, citation tools.
 
 ```mermaid
 graph TD
@@ -351,14 +346,12 @@ graph TD
     E --> G["Information Use"]
 ```
 
-**Result:** Interface support at each stage reduces cognitive load, improves query quality, and increases the likelihood of satisfying the user's information need.
 
 ---
 
-#### Analyze web search challenges and explain web search engine architecture (5 marks)
+#### Analyse web search challenges and explain web search engine architecture (5 marks)
 
 **Challenges in Searching the Web:**
-
 - **Scale:** Billions of pages; distributed storage and parallel processing required.
 - **Heterogeneity:** Diverse formats, languages, and quality levels.
 - **Dynamic content:** Pages change, appear, and disappear rapidly.
@@ -368,14 +361,13 @@ graph TD
 - **Freshness:** Need for real-time indexing of news and social media.
 
 **Architecture of a Typical Web Search Engine:**
-
-1. **Crawler / Spider** — Traverses the web, fetches pages, and extracts links.
-2. **Page Repository / Store** — Stores raw fetched pages.
-3. **Indexer** — Parses pages, extracts terms, builds the inverted index.
-4. **Index / Inverted Index** — Maps terms to document postings.
-5. **Query Processor** — Parses the user query and retrieves candidate documents.
-6. **Ranker** — Scores documents using link analysis (PageRank), relevance, and freshness.
-7. **Result Presentation** — Displays ranked results with snippets and ads.
+1. **Crawler / Spider**: Traverses the web, fetches pages, and extracts links.
+2. **Page Repository / Store**: Stores raw fetched pages.
+3. **Indexer**: Parses pages, extracts terms, builds the inverted index.
+4. **Index / Inverted Index**: Maps terms to document postings.
+5. **Query Processor**: Parses the user query and retrieves candidate documents.
+6. **Ranker**: Scores documents using link analysis (PageRank), relevance, and freshness.
+7. **Result Presentation**: Displays ranked results with snippets and ads.
 
 ```mermaid
 graph TD
@@ -389,5 +381,3 @@ graph TD
     H --> I["Result Presentation"]
     I --> F
 ```
-
-**Result:** A web search engine combines crawling, indexing, query processing, and ranking; its main challenges are scale, dynamism, heterogeneity, and adversarial content.

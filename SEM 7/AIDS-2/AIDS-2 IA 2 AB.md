@@ -301,6 +301,15 @@ The McCulloch-Pitts neuron uses binary inputs, weights, and a threshold to produ
 | 1 | 0 | 1 | 1 |
 | 1 | 1 | 2 | 1 |
 
+```mermaid
+graph LR
+    x1((x₁)) -->|w₁ = 1| S[Σ]
+    x2((x₂)) -->|w₂ = 1| S
+    S --> T{≥ θ = 1 ?}
+    T -->|Yes| Y((y = 1))
+    T -->|No| N((y = 0))
+```
+
 **AND Gate:**
 - Weights: \(w_1 = 1, w_2 = 1\), \( $\theta$ = 2\)
 - Output: \(y = 1\) if \(x_1 + x_2 $\geq$ 2\)
@@ -311,6 +320,15 @@ The McCulloch-Pitts neuron uses binary inputs, weights, and a threshold to produ
 | 0 | 1 | 1 | 0 |
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 2 | 1 |
+
+```mermaid
+graph LR
+    x1((x₁)) -->|w₁ = 1| S[Σ]
+    x2((x₂)) -->|w₂ = 1| S
+    S --> T{≥ θ = 2 ?}
+    T -->|Yes| Y((y = 1))
+    T -->|No| N((y = 0))
+```
 
 **NOR Gate:**
 - Weights: \(w_1 = -1, w_2 = -1\), \( $\theta$ = 0\)
@@ -323,6 +341,15 @@ The McCulloch-Pitts neuron uses binary inputs, weights, and a threshold to produ
 | 1 | 0 | -1 | 0 |
 | 1 | 1 | -2 | 0 |
 
+```mermaid
+graph LR
+    x1((x₁)) -->|w₁ = -1| S[Σ]
+    x2((x₂)) -->|w₂ = -1| S
+    S --> T{≥ θ = 0 ?}
+    T -->|Yes| Y((y = 1))
+    T -->|No| N((y = 0))
+```
+
 **XOR Gate:**
 - XOR is not linearly separable; a single MP neuron cannot implement it.
 - **Solution:** Use a two-layer network:
@@ -331,13 +358,17 @@ The McCulloch-Pitts neuron uses binary inputs, weights, and a threshold to produ
 
 ```mermaid
 graph LR
-    A[x1] --> C[OR]
-    B[x2] --> C
-    A --> D[NAND]
-    B --> D
-    C --> E[AND]
-    D --> E
-    E --> F[Output]
+    x1((x₁)) -->|+1| H1[Σ h₁]
+    x2((x₂)) -->|-1| H1
+    H1 -->|θ=1| A((h₁))
+
+    x1 -->|-1| H2[Σ h₂]
+    x2 -->|+1| H2
+    H2 -->|θ=1| B((h₂))
+
+    A -->|+1| O[Σ y]
+    B -->|+1| O
+    O -->|θ=1| Y((y))
 ```
 
 ---
@@ -346,29 +377,69 @@ graph LR
 
 Activation functions introduce non-linearity, enabling neural networks to learn complex patterns.
 
-**1. Sigmoid:**
-- \( \sigma(x) = \frac{1}{1 + e^{-x}} \)
-- Range: (0, 1)
-- **Diagram:** S-shaped curve.
-- **Use:** Binary classification output.
+1. **Linear Activation Function**
 
-**2. Tanh (Hyperbolic Tangent):**
-- \( \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} \)
-- Range: (−1, 1)
-- **Diagram:** S-shaped, zero-centered.
-- **Use:** Hidden layers.
+$$
+Equation:
+\
+f(x) = x
+\
+$$
+$$
+Range: 
+\
+(-\infty, +\infty)
+\
+$$
 
-**3. ReLU (Rectified Linear Unit):**
-- \( \text{ReLU}(x) = \max(0, x) \)
-- Range: [0, ∞)
-- **Diagram:** Flat for negative, linear for positive.
-- **Use:** Most hidden layers.
+**Use Case:**
+Used in regression output layers for predicting continuous unbounded values.
 
+**Diagram:**
 ```mermaid
 ---
 config:
   xyChart:
-    width: 600
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "Linear: f(x) = x"
+    x-axis "x" [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    y-axis "f(x)" -6 --> 6
+    line [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+```
+
+2. **Sigmoid Activation Function**
+
+$$
+Equation:
+\
+\sigma(x) = \frac{1}{1 + e^{-x}}
+\
+$$
+$$
+Range:
+\
+(0, 1)
+\
+$$
+
+**Use Case:**
+Used in binary classification output layers for probability estimation.
+
+**Diagram:**
+```mermaid
+---
+config:
+  xyChart:
+    width: 800
     height: 400
     xAxis:
       labelFontSize: 14
@@ -384,67 +455,260 @@ xychart-beta
     line [0.0025, 0.0067, 0.018, 0.047, 0.119, 0.269, 0.5, 0.731, 0.881, 0.953, 0.982, 0.993, 0.9975]
 ```
 
-**4. Leaky ReLU:**
-- \( \text{Leaky ReLU}(x) = \max(0.01x, x) \)
-- Range: (−∞, ∞)
-- **Diagram:** Small slope for negative.
-- **Use:** Avoids dead neurons.
+3. **Tanh (Hyperbolic Tangent) Activation Function**
 
-**5. Softmax:**
-- \( \text{Softmax}(x_i) = \frac{e^{x_i}}{$\sum$_j e^{x_j}} \)
-- Range: (0, 1), sums to 1.
-- **Use:** Multi-class classification output.
+$$
+Equation:
+\
+\tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}
+\
+$$
+$$
+Range:
+\
+(-1, 1)
+\
+$$
 
-**6. Linear:**
-- \( f(x) = x \)
-- Range: (−∞, ∞)
-- **Use:** Regression output.
+**Use Case:**
+Used in hidden layers of RNNs for centered zero-mean activations.
 
+**Diagram:**
 ```mermaid
-graph LR
-    A[Activation Functions] --> B[Sigmoid]
-    A --> C[Tanh]
-    A --> D[ReLU]
-    A --> E[Leaky ReLU]
-    A --> F[Softmax]
-    A --> G[Linear]
+---
+config:
+  xyChart:
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "Tanh: tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))"
+    x-axis "x" [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    y-axis "tanh(x)" -1 --> 1
+    line [-0.9999, -0.9999, -0.9993, -0.9951, -0.9640, -0.7616, 0, 0.7616, 0.9640, 0.9951, 0.9993, 0.9999, 0.9999]
 ```
 
-**Summary:** Each activation function has unique properties; ReLU and its variants are preferred for deep networks due to computational efficiency and reduced vanishing gradient.
+4. **ReLU (Rectified Linear Unit) Activation Function**
+
+$$
+Equation:
+\
+f(x) = \max(0, x)
+\
+$$
+$$
+Range:
+\
+[0, +\infty)
+\
+$$
+
+**Use Case:**
+Used in hidden layers of CNNs for fast sparse training.
+
+**Diagram:**
+```mermaid
+---
+config:
+  xyChart:
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "ReLU: f(x) = max(0, x)"
+    x-axis "x" [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    y-axis "f(x)" 0 --> 6
+    line [0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6]
+```
+
+5. **Leaky ReLU Activation Function**
+
+$$
+Equation:
+\
+f(x) = \begin{cases} x, & x > 0 \\ \alpha x, & x \leq 0 \end{cases} \quad (\alpha = 0.01)
+\
+$$
+$$
+Range:
+\
+(-\infty, +\infty)
+\
+$$
+
+**Use Case:**
+Used in deep networks to prevent dying ReLU neurons.
+
+**Diagram:**
+```mermaid
+---
+config:
+  xyChart:
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "Leaky ReLU: f(x) = max(0.01x, x)"
+    x-axis "x" [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    y-axis "f(x)" -0.1 --> 6
+    line [-0.06, -0.05, -0.04, -0.03, -0.02, -0.01, 0, 1, 2, 3, 4, 5, 6]
+```
+
+6. **SoftPlus Activation Function**
+
+$$
+Equation:
+\
+f(x) = \ln(1 + e^{x})
+\
+$$
+$$
+Range:
+\
+(0, +\infty)
+\
+$$
+
+**Use Case:**
+Used in probabilistic models ensuring smooth positive outputs.
+
+**Diagram:**
+```mermaid
+---
+config:
+  xyChart:
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "SoftPlus: f(x) = ln(1 + e^x)"
+    x-axis "x" [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    y-axis "f(x)" 0 --> 7
+    line [0.0025, 0.0067, 0.018, 0.049, 0.127, 0.313, 0.693, 1.313, 2.127, 3.049, 4.018, 5.007, 6.003]
+```
+
+7. Softmax Activation Function
+
+$$
+Equation:
+\
+\text{Softmax}(x_i) = \frac{e^{x_i}}{\sum_{j=1}^{K} e^{x_j}}
+\
+$$
+$$
+Range:
+\
+(0, 1), \quad \sum_{i=1}^{K} \text{Softmax}(x_i) = 1
+\
+$$
+
+**Use Case:**
+Used in multiclass classification output layers for probability distribution.
+
+**Diagram:**
+```mermaid
+---
+config:
+  xyChart:
+    width: 800
+    height: 400
+    xAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+    yAxis:
+      labelFontSize: 14
+      titleFontSize: 16
+---
+xychart-beta
+    title "Softmax: S(xi) = e^(xi) / Σ e^(xj)  [K=3, x2=x3=0]"
+    x-axis "x1" [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+    y-axis "S(x1)" 0 --> 1
+    line [0.018, 0.047, 0.119, 0.269, 0.333, 0.576, 0.787, 0.906, 0.965]
+```
 
 ---
 
 #### Explain Bagging and Boosting in detail (5 marks)
 
-**Bagging (Bootstrap Aggregating):**
-- **Concept:** Train multiple models on different bootstrap samples of the dataset.
-- **Aggregation:** Majority vote (classification) or average (regression).
-- **Goal:** Reduce variance.
-- **Example:** Random Forest.
-- **Steps:**
-  1. Create \(B\) bootstrap samples.
-  2. Train a base model on each.
-  3. Aggregate predictions.
+**Bagging**:
+Reduces **variance** by training multiple models on random samples and then by combining their outputs. 
+- Each model trains **independently**
+- Predictions combined by **voting** (classification) or **averaging** (regression)
+- Works best with **high-variance models** like decision trees
 
-**Boosting:**
-- **Concept:** Train models sequentially, each focusing on errors of the previous.
-- **Aggregation:** Weighted sum of predictions.
-- **Goal:** Reduce bias.
-- **Example:** AdaBoost, Gradient Boosting.
-- **Steps:**
-  1. Train initial model.
-  2. Increase weights of misclassified samples.
-  3. Train next model on reweighted data.
-  4. Repeat and combine.
+```mermaid
+graph TD
+    D[Dataset] --> B1[Bootstrap Sample 1]
+    D --> B2[Bootstrap Sample 2]
+    D --> B3[Bootstrap Sample 3]
 
-| **Aspect** | **Bagging** | **Boosting** |
-|---|---|---|
-| **Training** | Parallel | Sequential |
-| **Focus** | Variance reduction | Bias reduction |
-| **Data sampling** | Bootstrap | Reweighted |
-| **Overfitting** | Less prone | More prone |
+    B1 --> M1[Model 1]
+    B2 --> M2[Model 2]
+    B3 --> M3[Model 3]
 
-**Key Distinctions:** Bagging builds independent models and combines them; boosting builds dependent models that correct each other's errors.
+    M1 --> C[Combine: Voting / Averaging]
+    M2 --> C
+    M3 --> C
+
+    C --> P[Final Prediction]
+```
+
+**Boosting**: 
+Reduces **bias** by training models **sequentially**, where each new model corrects the errors of the previous ones.
+- Each model trains **sequentially**, learning from prior mistakes
+- Misclassified points get **higher weights** in the next iteration
+- Predictions combined by **weighted voting** (classification) or **weighted sum** (regression)
+- Works best with **weak learners** like shallow decision stumps
+
+```mermaid
+graph TD
+    D[Dataset] --> M1[Model 1]
+    M1 -->|Reweight misclassified points| M2[Model 2]
+    M2 -->|Reweight misclassified points| M3[Model 3]
+    M3 -->|Reweight misclassified points| M4[Model N]
+
+    M1 -->|Weight w1| C[Weighted Combination]
+    M2 -->|Weight w2| C
+    M3 -->|Weight w3| C
+    M4 -->|Weight wN| C
+
+    C --> P[Final Prediction]
+```
+
+|**#**|**Aspect**|**Bagging**|**Boosting**|
+|---|---|---|---|
+|1|**Training**|Models trained in **parallel**|Models trained **sequentially**|
+|2|**Goal**|Reduces **variance**|Reduces **bias**|
+|3|**Data Sampling**|**Bootstrap** (random with replacement)|**Reweighted** (focus on errors)|
+|4|**Weights**|Equal weight to all samples|Higher weight to **misclassified** samples|
+|5|**Model Combination**|**Voting** / **Averaging**|**Weighted** voting / sum|
+|6|**Base Learners**|**High-variance** models (deep trees)|**Weak learners** (stumps)|
+|7|**Overfitting**|**Less prone**|**More prone**|
+|8|**Examples**|Random Forest|AdaBoost, Gradient Boosting, XGBoost|
 
 ---
 
@@ -453,17 +717,17 @@ graph LR
 **Long Short-Term Memory (LSTM)** is a type of RNN designed to overcome the vanishing gradient problem, enabling learning of long-term dependencies.
 
 **Components:**
-1. **Cell State (\(C_t\)):** Long-term memory.
-2. **Forget Gate (\(f_t\)):** Decides what to discard from cell state.
-   - \( f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \)
-3. **Input Gate (\(i_t\)):** Decides what new information to store.
-   - \( i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \)
-   - \( \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \)
+1. **Cell State $(C_t)$:** Long-term memory.
+2. **Forget Gate $(f_t)$:** Decides what to discard from cell state.
+   $$f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$$
+3. **Input Gate $(i_t)$:** Decides what new information to store.
+   $$i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$$
+   $$\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$$
 4. **Cell State Update:**
-   - \( C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t \)
-5. **Output Gate (\(o_t\)):** Decides what to output.
-   - \( o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \)
-   - \( h_t = o_t \cdot \tanh(C_t) \)
+   $$C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t$$
+5. **Output Gate ($o_t$):** Decides what to output.
+   $$o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$$
+   $$h_t = o_t \cdot \tanh(C_t)$$
 
 ```mermaid
 graph TD
@@ -478,19 +742,25 @@ graph TD
 
 **Applications:** Machine translation, speech recognition, time-series prediction.
 
-**Result:** LSTM selectively remembers or forgets information, making it effective for sequential data with long-range dependencies.
-
 ---
 
 #### Draw and explain architecture of convolutional neural networks. Explain kernel and pooling (5 marks)
 
-**CNN Architecture:**
-- **Input Layer:** Raw image data.
-- **Convolutional Layers:** Apply filters (kernels) to extract features.
-- **Activation Layers:** Typically ReLU.
-- **Pooling Layers:** Downsample feature maps.
-- **Fully Connected Layers:** Perform classification.
-- **Output Layer:** Softmax for probabilities.
+Convolutional Neural Networks (CNNs), are neural network architectures inspired by the human visual system, designed to process image data by capturing spatial relationships between pixels.
+
+- Learn hierarchical features from simple edges to complex objects
+- Capture spatial patterns using convolution operations
+- Detect objects regardless of their position in the image
+- Reduce computation by focusing on local regions instead of the entire image
+
+1. **Input** **Layer**: Receives the raw image data and passes it to the network for processing. In CNNs, input is typically a 3D volume (width × height × depth).
+2. **Convolution** **Layer**: Responsible for extracting important features from the input data. It applies a set of learnable filters (kernels) that slide over the image and compute the dot product between the filter weights and corresponding image patches, producing feature maps.
+3. **Activation** **Layer**: Introduces non-linearity into the network by applying an element-wise activation function to the output of the convolution layer. This enables the model to learn complex patterns beyond linear relationships.
+4. **Pooling** **Layer**: Used to reduce the spatial dimensions of the feature maps, making computation faster, reducing memory usage and helping to prevent overfitting. 
+5. **Flattening**: Converts the multi-dimensional feature maps into a one-dimensional vector after convolution and pooling. 
+6. **Fully** **Connected** **Layer**: Performs high-level reasoning using extracted features and produces the final classification scores.
+7. **Output** **Layer**: Converts final scores into probabilities using activation functions like Sigmoid (binary classification) or Softmax (multi-class classification).
+
 
 ```mermaid
 graph TD
@@ -515,8 +785,6 @@ graph TD
 - **Max Pooling:** Takes maximum value in window.
 - **Average Pooling:** Takes average.
 - Reduces computation and controls overfitting.
-
-**Result:** CNNs automatically learn hierarchical features, achieving state-of-the-art performance in image tasks.
 
 ---
 
@@ -548,8 +816,6 @@ graph TD
     F --> G
     G --> H[Personalized Response]
 ```
-
-**Result:** Multimodal integration improves accuracy, robustness, and user satisfaction by leveraging complementary information.
 
 ---
 
