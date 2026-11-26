@@ -48,17 +48,17 @@
 
 ### Module IV: Test Automation
 
-| # | Question | Marks | Month & Year |
-|---|---|---|---|
-| 1 | What criteria will you consider for selection of test tools for automation testing | 5 (Q1c) | Dec 2022 |
-| 2 | What is the need of automation testing activities? Differentiate between static and dynamic tools | 10 | Dec 2022 |
-| 3 | Discuss the features and use of Bugzilla Testing Tool | 5 (Q1e) | May 2023 |
-| 4 | Why is automation important in testing? What are the guidelines for selecting testing tools? | 10 | May 2023 |
-| 5 | Explain the need of automation in testing? Differentiate between manual testing and Automated Testing | 10 (Q1A) | Nov 2019 |
-| 6 | Explain a bug life cycle with a neat diagram in detail. List down the states of a bug | 10 | Dec 2022 |
-| 7 | Classify different types of bugs based on the Software development lifecycle with example | 10 | May 2023 |
-| 8 | Classify different types of bugs based on Software development lifecycle | 10 | Nov 2019 |
-| 9 | Bug Lifecycle (short note) | 20 (Q6C) | Nov 2019 |
+| #   | Question                                                                                              | Marks    | Month & Year |
+| --- | ----------------------------------------------------------------------------------------------------- | -------- | ------------ |
+| 1   | What criteria will you consider for selection of test tools for automation testing                    | 5 (Q1c)  | Dec 2022     |
+| 2   | What is the need of automation testing activities? Differentiate between static and dynamic tools     | 10       | Dec 2022     |
+| 3   | Discuss the features and use of Bugzilla Testing Tool                                                 | 5 (Q1e)  | May 2023     |
+| 4   | Why is automation important in testing? What are the guidelines for selecting testing tools?          | 10       | May 2023     |
+| 5   | Explain the need of automation in testing? Differentiate between manual testing and Automated Testing | 10 (Q1A) | Nov 2019     |
+| 6   | Explain a bug life cycle with a neat diagram in detail. List down the states of a bug                 | 10       | Dec 2022     |
+| 7   | Classify different types of bugs based on the Software development lifecycle with example             | 10       | May 2023     |
+| 8   | Classify different types of bugs based on Software development lifecycle                              | 10       | Nov 2019     |
+| 9   | Bug Lifecycle (short note)                                                                            | 20 (Q6C) | Nov 2019     |
 
 ---
 

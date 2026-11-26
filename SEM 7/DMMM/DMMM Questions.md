@@ -58,20 +58,20 @@
 
 ### Module 3: Disaster Management, Policy and Administration
 
-| # | Question | Marks | Month & Year |
-|---|----------|-------|--------------|
-| 1 | What are different government agencies responsible for various types of disasters? | 10 | Dec 2022 |
-| 2 | Discuss the roles and functions of various government agencies in Disaster Management in India, emphasizing their coordination and collaboration efforts | 10 | May 2024 |
-| 3 | Discuss the framework for disaster management in India | 10 | Dec 2023 |
-| 4 | National Disaster Management Policy | 5 | Dec 2023 |
-| 5 | Discuss in brief the Disaster Management Act 2005 | 10 | Dec 2023 |
-| 6 | Write a short note on DM Act 2005 | 5 | May 2025 |
-| 7 | Describe the key provisions & objectives of Disaster Management Act, 2005 | 10 | Dec 2025 |
-| 8 | Explain PDCA cycle of disaster management | 5 | May 2025 |
-| 9 | Elaborate on the PDCA cycle of disaster management | 8 | Dec 2025 |
-| 10 | Examine the multifaceted components of Disaster Management, including preparedness, response, recovery, and mitigation strategies | 10 | May 2024 |
-| 11 | Describe the Search and Rescue (SAR) procedure in disaster response, supported by a case study illustrating its implementation and effectiveness | 10 | May 2024 |
-| 12 | Evolving approaches to disaster management in India | 5 | Dec 2024 |
+| #   | Question                                                                                                                                                 | Marks | Month & Year |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------------ |
+| 1   | What are different government agencies responsible for various types of disasters?                                                                       | 10    | Dec 2022     |
+| 2   | Discuss the roles and functions of various government agencies in Disaster Management in India, emphasizing their coordination and collaboration efforts | 10    | May 2024     |
+| 3   | Discuss the framework for disaster management in India                                                                                                   | 10    | Dec 2023     |
+| 4   | National Disaster Management Policy                                                                                                                      | 5     | Dec 2023     |
+| 5   | Discuss in brief the Disaster Management Act 2005                                                                                                        | 10    | Dec 2023     |
+| 6   | Write a short note on DM Act 2005                                                                                                                        | 5     | May 2025     |
+| 7   | Describe the key provisions & objectives of Disaster Management Act, 2005                                                                                | 10    | Dec 2025     |
+| 8   | Explain PDCA cycle of disaster management                                                                                                                | 5     | May 2025     |
+| 9   | Elaborate on the PDCA cycle of disaster management                                                                                                       | 8     | Dec 2025     |
+| 10  | Examine the multifaceted components of Disaster Management, including preparedness, response, recovery, and mitigation strategies                        | 10    | May 2024     |
+| 11  | Describe the Search and Rescue (SAR) procedure in disaster response, supported by a case study illustrating its implementation and effectiveness         | 10    | May 2024     |
+| 12  | Evolving approaches to disaster management in India                                                                                                      | 5     | Dec 2024     |
 
 ---
 

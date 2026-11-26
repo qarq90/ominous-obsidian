@@ -92,9 +92,13 @@ Centroid is most commonly used due to its stability and accuracy.
 
 A Markov Decision Process (MDP) is a mathematical framework used to model sequential decision-making problems where the outcome of an action is uncertain. It is widely used in Artificial Intelligence (AI), Machine Learning, Robotics and Reinforcement Learning to help an agent choose actions that maximize long-term rewards while interacting with an environment.
 
-MDPs consist of states, actions, transition probabilities, and rewards that define the environment. An agent selects actions based on its current state to maximize cumulative future rewards over time. The Markov property ensures that the future depends only on the present state, not on history.
+Markov Decision Processes consist of states, actions, transition probabilities, and rewards that define the environment. An agent selects actions based on its current state to maximize cumulative future rewards over time. The Markov property ensures that the future depends only on the present state, not on history.
 
-The Bellman equation expresses the optimal value function for each state:
+**Components**:
+- **States**: All possible situations the agent can be in.
+- **Actions**: Choices the agent can make in each state.
+- **Transition Probabilities**: Likelihood of moving between states after an action.
+- **Rewards**: Immediate feedback received after taking an action.
 
 ```mermaid
 graph TD
@@ -113,7 +117,9 @@ graph TD
 Bayes' theorem describes the probability of an event based on prior knowledge of related conditions.
 
 **Formula:**
-P(A|B) = P(B|A) × P(A) / P(B)
+$$
+P(A \mid B) = \frac{P(B \mid A) \times P(A)}{P(B)}
+$$
 
 Where:
 - P(A|B) = Posterior probability (after evidence)
@@ -396,29 +402,83 @@ The foundation lies in processing vast amounts of data to recognize patterns and
 #### Discuss the limitations of the deterministic approach and explain how probabilistic reasoning overcomes these limitations with a suitable example (5 marks)
 
 **Limitations of deterministic approach:**
-
-Deterministic systems produce fixed outputs for given inputs without considering uncertainty. They cannot handle incomplete, ambiguous, or noisy data effectively. These systems fail when multiple plausible outcomes exist for the same situation. They are rigid and cannot adapt to dynamic, real-world conditions with variable probabilities.
+- Produce fixed outputs for given inputs and no uncertainty considered.
+- Cannot handle incomplete data effectively.
+- Cannot handle ambiguous data effectively.
+- Cannot handle noisy data effectively.
+- Fail when multiple plausible outcomes exist.
+- Rigid as they cannot adapt to dynamic conditions.
+- Cannot model variable real-world probabilities.
 
 **How probabilistic reasoning overcomes these limitations:**
-
-Probabilistic reasoning assigns likelihoods to possible outcomes using statistical models. It incorporates prior knowledge and updates beliefs based on observed evidence through Bayesian inference. This approach handles noise, missing data, and contradictory information gracefully.
+**Probabilistic reasoning** assigns probabilities to events and uses Bayes' rule / probability theory to combine evidence, allowing:
+- Representation of **uncertainty** via probability distributions.
+- **Evidence combination**: updating beliefs as new (possibly noisy) evidence arrives.
+- **Reasoning with incomplete data** by marginalizing over unknowns.
+- **Ranking of hypotheses** by likelihood rather than yes/no conclusions.
 
 **Example:**
 
-In medical diagnosis, a deterministic rule might state: "If fever and cough, then influenza." However, these symptoms also indicate pneumonia or COVID-19. Probabilistic reasoning calculates conditional probabilities, for example: P(Influenza | fever, cough) = 0.4, P(Pneumonia | fever, cough) = 0.3, P(COVID-19 | fever, cough) = 0.3. This provides a differential diagnosis with confidence levels, aiding clinicians in decision-making.
+Problem: Cloudy days don't always bring rain. The system says "rain" with 100% certainty, wrong on many days. It also can't express "it _might_ rain" or "rain is likely but not certain." One missing fact (e.g., cloud data unavailable) and the rule simply fails.
+
+Instead of a yes/no rule, we attach probabilities:
+
+- P(rain)=0.3 (prior, it rains 30% of days)
+- P(cloudy ∣ rain) = 0.9 (cloudy on 90% of rainy days)
+- P(cloudy ∣ no rain)=0.2 (cloudy on 20% of dry days)
+
+Now it's cloudy. Using Bayes' rule:
+$$
+P(\text{rain} \mid \text{cloudy})
+= \frac{0.9 \times 0.3}{0.9 \times 0.3 + 0.2 \times 0.7}
+= \frac{0.27}{0.27 + 0.14}
+\approx 0.66
+$$
+
+**Result:** "66% chance of rain" — a graded belief, not a blind yes/no.
 
 ---
 
 #### Describe the role of utility and expected utility in decision theory, and illustrate with an example (5 marks)
 
 **Role of utility:**
-
-Utility quantifies the desirability or preference of different outcomes for a decision-maker. It assigns numerical values to reflect subjective satisfaction, risk tolerance, or organizational goals. Utility transforms abstract preferences into measurable quantities for systematic comparison.
+**Utility** is a numerical measure of the satisfaction, value, or desirability that an individual attaches to a particular outcome. In decision theory, utility functions represent an agent's preferences over outcomes: if an agent prefers outcome A to outcome B, then U(A) > U(B).
 
 **Role of expected utility:**
-
-Expected utility calculates the average utility by weighting each outcome by its probability. This provides a rational basis for selecting actions that maximize long-term satisfaction. Decision-makers choose the option with the highest expected utility under uncertainty.
+**Expected utility** extends this to decisions under **risk/uncertainty**. When each action can lead to several possible outcomes with known probabilities, the expected utility of an action is the probability-weighted average of the utilities of its possible outcomes:
+$$
+EU(A)=i∑​pi​⋅U(Oi​)
+$$
+The **expected utility principle** states that a rational agent should choose the action that maximises expected utility.
 
 **Example:**
+Suppose a student must choose between two options:
+- **Option A (safe):** Accept a guaranteed internship offering a utility of **10**.
+- **Option B (risky):** Apply for a competitive scholarship. There is a **30% chance** of winning (utility **30**) and a **70% chance** of getting nothing (utility **0**).
 
-Consider investing ₹1,00,000 in either stocks or bonds. Stocks have 60% chance of ₹1,50,000 gain (utility 100) and 40% chance of ₹50,000 loss (utility 0). Expected utility for stocks = (0.6 × 100) + (0.4 × 0) = 60. Bonds have 90% chance of ₹1,10,000 gain (utility 80) and 10% chance of ₹90,000 return (utility 50). Expected utility for bonds = (0.9 × 80) + (0.1 × 50) = 77. The decision-maker chooses bonds with higher expected utility.
+Compute expected utilities:
+$$
+EU(A)=10 
+$$
+$$
+EU(B)=0.3(30)+0.7(0)=9
+$$
+```mermaid
+flowchart TD
+    A[Decision Maker] --> B{Choose Action}
+    B --> C[Option A: Safe Internship]
+    B --> D[Option B: Risky Scholarship]
+    
+    C --> E["Utility = 10<br/>EU(A) = 10"]
+    D --> F["30% Win → Utility 30"]
+    D --> G["70% Nothing → Utility 0"]
+    
+    F --> H["EU(B) = 0.3×30 + 0.7×0 = 9"]
+    G --> H
+    
+    E --> I{Compare Expected Utilities}
+    H --> I
+    
+    I --> J["EU(A)=10 > EU(B)=9"]
+    J --> K[Choose Option A]
+```

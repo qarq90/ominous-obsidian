@@ -158,15 +158,15 @@ Applications: Smart-home automation, industrial monitoring, connected vehicles, 
 
 These protocols enable communication between devices, applications, and messaging systems, but differ in architecture and resource requirements.
 
-|Aspect|MQTT|MQTT-SN|CoAP|AMQP|STOMP|
-|---|---|---|---|---|---|
-|Full form|Message Queuing Telemetry Transport|MQTT for Sensor Networks|Constrained Application Protocol|Advanced Message Queuing Protocol|Simple Text Oriented Messaging Protocol|
-|Model|Publish–subscribe|Publish–subscribe|Request–response|Message-oriented messaging|Message-oriented messaging|
-|Transport|TCP/IP|Supports non-TCP/IP sensor networks|Primarily UDP|TCP-based transport|Commonly TCP-based|
-|Broker requirement|Yes, in standard architecture|Gateway/broker commonly used|Not inherently required|Broker or messaging nodes, depending on architecture|Usually a messaging server|
-|Message format|Compact binary packets|Compact packets with topic IDs|Compact binary messages|Binary framing and message format|Text-based frames|
-|Main strength|Lightweight telemetry|Constrained sensor networks|Low overhead and REST-style interaction|Reliable enterprise messaging|Simplicity and interoperability|
-|Typical application|Smart devices|Wireless sensor networks|Constrained devices and building automation|Enterprise and business systems|Applications using message brokers|
+| Aspect              | MQTT                                | MQTT-SN                             | CoAP                                        | AMQP                                                 | STOMP                                   |
+| ------------------- | ----------------------------------- | ----------------------------------- | ------------------------------------------- | ---------------------------------------------------- | --------------------------------------- |
+| Full form           | Message Queuing Telemetry Transport | MQTT for Sensor Networks            | Constrained Application Protocol            | Advanced Message Queuing Protocol                    | Simple Text Oriented Messaging Protocol |
+| Model               | Publish–subscribe                   | Publish–subscribe                   | Request–response                            | Message-oriented messaging                           | Message-oriented messaging              |
+| Transport           | TCP/IP                              | Supports non-TCP/IP sensor networks | Primarily UDP                               | TCP-based transport                                  | Commonly TCP-based                      |
+| Broker requirement  | Yes, in standard architecture       | Gateway/broker commonly used        | Not inherently required                     | Broker or messaging nodes, depending on architecture | Usually a messaging server              |
+| Message format      | Compact binary packets              | Compact packets with topic IDs      | Compact binary messages                     | Binary framing and message format                    | Text-based frames                       |
+| Main strength       | Lightweight telemetry               | Constrained sensor networks         | Low overhead and REST-style interaction     | Reliable enterprise messaging                        | Simplicity and interoperability         |
+| Typical application | Smart devices                       | Wireless sensor networks            | Constrained devices and building automation | Enterprise and business systems                      | Applications using message brokers      |
 
 #### Explanation
 

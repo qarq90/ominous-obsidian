@@ -218,7 +218,7 @@ graph LR
 1. User issues an initial query.
 2. System returns an initial result set.
 3. User marks some results as relevant or non-relevant.
-4. System reformulates the query (e.g., Rocchio algorithm) by expanding the query vector toward relevant documents and away from non-relevant ones.
+4. System reformulates the query by expanding the query vector toward relevant documents and away from non-relevant ones.
 5. Improved results are returned.
 
 ```mermaid

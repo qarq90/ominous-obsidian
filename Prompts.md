@@ -46,7 +46,7 @@
 ### 6. Tabular Comparison Prompt
 
 **Name:** `STRICT_TABLE_RESPONSE`
-> Answer each question strictly in a table. Each cell uses 2-4 words only.
+> Answer each question strictly in a table. Each cell uses 6-8 words only.
 > No introductions, summaries, or remarks before/after the table.
 >
 > **Format:**

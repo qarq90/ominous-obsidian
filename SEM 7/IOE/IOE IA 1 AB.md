@@ -272,12 +272,7 @@ C --- F[Data Centers]
 
  Q10. With the help of a neat diagram, elaborate on the architecture of the IoTWF (IoT World Forum) reference model.
 
-IoTWF Reference Model:
-- Seven-layer architecture for IoT.
-- Developed by IoT World Forum.
-- Provides standardized framework.
-- Addresses interoperability challenges.
-- Covers edge to cloud continuum.
+The IoTWF Reference Model is a seven-layer architecture developed by the IoT World Forum that provides a standardized framework covering the edge-to-cloud continuum. It addresses interoperability challenges across IoT systems.
 
 Layer 1 - Physical Devices:
 - Sensors, actuators, and controllers.
